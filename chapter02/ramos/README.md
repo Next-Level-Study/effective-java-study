@@ -1,4 +1,6 @@
 ## 2장. 객체 생성과 파괴
+📌 [2장의 item 별 요약은 다음을 참고해주세요.](https://github.com/alanhakhyeonsong/LetsReadBooks/tree/master/Effective%20Java%203E/contents/chapter02)
+
 DTO class, XxxUtils와 같은 클래스에서 정적 팩토리 메서드를 많이 사용하는데 Builder 패턴과 연계해서 사용한다면 더 효과적이라 생각된다.
 
 DTO class의 경우, 필드가 많아진다면 특히 Builder가 유용하다.
