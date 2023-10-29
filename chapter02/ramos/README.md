@@ -103,7 +103,7 @@ void tryWithResourcesByJava7() throws IOException {
 // Java 9 ~
 void tryWithResourcesByJava9() throws IOException {
     BufferedReader reader = new BufferedReader(new FileReader("test.txt"));
-try (reader) {
+    try (reader) {
         // do something
     }
 }
