@@ -3,6 +3,23 @@
 
 // 흥미로운 이야기만 이 파일에 작성합니다.
 
+### Item 21. 인터페이스는 구현하는 쪽을 생각해 설계하라
+Item 21 내용 중 대표적인 사례를 직접 찾아보며 어떻게 구현되어 있는지 확인해보았다.
+
+`Collections` 내부에 있는 `SynchronizedCollection`은 다음과 같다.
+
+![스크린샷 2023-11-19 오전 2 07 14](https://github.com/alanhakhyeonsong/LetsReadBooks/assets/60968342/fdd5da72-0b96-4d56-bd7d-7d21bb36ea71)
+
+`removeIf`는 기본적으로 코드 구현이 되어 있는데 `SynchronizedCollection` 클래스는 동기화 처리를 해줘야하기 때문에 해당 부분을 `synchronized` 블럭으로 감싸서 대처하는 모습을 볼 수 있다.
+
+![스크린샷 2023-11-19 오전 2 07 34](https://github.com/alanhakhyeonsong/LetsReadBooks/assets/60968342/a9ad783e-ba93-42ce-abc1-8f2e85e270fe)
+
+`SynchronizedCollection`가 처음 생성될 때 존재하지 않았던 인터페이스인데 이러한 부분을 `Collections` 에서 `default` 메서드로 정의해 두었다. 아래는 `Collections`에 `default` 메서드로 추가된 여러 개의 메소드 중 하나인 `removeIf` 메서드다.
+
+![스크린샷 2023-11-19 오전 2 07 49](https://github.com/alanhakhyeonsong/LetsReadBooks/assets/60968342/8ccc21b6-49f3-47e3-9911-af67c7c9268a)
+
+`SynchronizedCollection` 인스턴스를 여러 스레드가 공유하는 환경에서 한 스레드가 `removeIf`를 호출하면 `ConcurrentModificationException`이 발생하거나 다른 예기치 못한 결과로 이어질 수 있다.
+
 ### Item 24. 멤버 클래스는 되도록 static으로 만들라
 
 147~148p를 보면 다음과 같은 내용이 나온다.
