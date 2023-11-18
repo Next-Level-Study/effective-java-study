@@ -52,6 +52,7 @@ public class OuterReference {
 ![image](https://github.com/alanhakhyeonsong/LetsReadBooks/assets/60968342/0f801afd-dddc-492b-ae3a-b777f7143caa)
 
 // Java 14에서의 결과
+
 ![1](https://github.com/alanhakhyeonsong/LetsReadBooks/assets/60968342/d362cf15-75a0-48f1-89b1-536d9c87fbf1)
 
 ![2](https://github.com/alanhakhyeonsong/LetsReadBooks/assets/60968342/aeff6d11-7be1-464d-9aa9-1e04058ba632)
