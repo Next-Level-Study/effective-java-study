@@ -17,11 +17,13 @@ let en = i18nHello("Hello🇺🇸");
 let ko = i18nHello("안녕🇰🇷");
 let fr = i18nHello("Bonsoir🇫🇷");
 let es = i18nHello("Hola🇪🇸");
+let jp = i18nHello("こんにちは🇯🇵");
 
 console.log(en("Ramos"));
 console.log(ko("Ramos"));
 console.log(fr("Ramos"));
 console.log(es("Ramos"));
+console.log(jp("Ramos"));
 
 /* 실행 결과
 Hello🇺🇸 Ramos
